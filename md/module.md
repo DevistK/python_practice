@@ -1,6 +1,7 @@
-### -2020-04-30-
+# -2020-04-30-
 
-#### 모듈과 패키지
+## 모듈과 패키지
+
 *  *  *   *  *  
 [모듈에 관한 공식 문서](https://docs.python.org/ko/3/tutorial/modules.html)
 
@@ -12,4 +13,4 @@
 파일에는 다양한 기능들을 담고 있을것이고 
 그 파일들을 분류해서 모아놓으면 패키지가 되는것이다.
 
-<img src="./images/module.png">
+<img src="../images/module.png">
