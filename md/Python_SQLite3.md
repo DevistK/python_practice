@@ -42,7 +42,7 @@ con.cursor()는 커서라는 객체를 가지고 있는데 이 커서는
 
 c.execute("CREATE TABLE userInfo(id INTGER PRYMARY KEY , name text, age text, address text )")
 
-c.execute("INSERT TO userInfo(id, name, age, address) VALUSE(1, 'Kim', '25', 'Incheon')")
+c.execute("INSERT INTO userInfo(id, name, age, address) VALUSE(1, 'Kim', '25', 'Incheon')")
 
 ```
 
@@ -68,7 +68,7 @@ sql 에서 지정된 type 들이 몇가지 있다.
 여기서 첫번째 컬럼리스트에 지정한 PRYMARY KEY는
 중복이 안되는 고유 값이다.
 
-아래의 INSERT TO userInfo 는 해당 테이블에 데이터를 삽입한다는 뜻
+아래의 INSERT INTO userInfo 는 해당 테이블에 데이터를 삽입한다는 뜻
 VALUSE() 이안에 삽입할 데이터를 적는다.
 데이터의 갯수는 컬럼리스트와 동일해야 매핑 가능함
 
@@ -88,7 +88,7 @@ datalist = (
     (4, 'Kim', '25', 'Incheon'),
     (5, 'Kim', '25', 'Incheon')
     )
-inserts = "INSERT TO userInfo(id, name, age, address) VALUSE(?,?,?,?)"
+inserts = "INSERT INTO userInfo(id, name, age, address) VALUSE(?,?,?,?)"
 c.executemany(inserts, datalist)
 ```
 
