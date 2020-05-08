@@ -23,7 +23,7 @@
             <!--크로스 사이트 요청 위조를 방지함 -->
             {% csrf_token %}
             <!-- view에서 전달받은 error 값을 html에 보여준다 -->
-            {{ error }}
+            <p class="alert_title">{{ error }}</p>
             <legend>회원가입</legend>
             <div class="form__group">
               <label for="username">사용자이름</label>

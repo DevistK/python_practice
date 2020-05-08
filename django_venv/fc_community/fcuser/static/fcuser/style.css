@@ -10,6 +10,7 @@ body{
 }
 .form__title{
   font-size:2.4rem;
+  color:#0779e4;
 }
 .form__field{
   position: relative;
@@ -30,17 +31,24 @@ body{
   height:auto;
   padding:1rem;
   margin:1rem 0;
+  border:1px solid #ddd;
 }
 
+/* 에러 메시지 */
+.alert_title{
+  font-size:16px;
+  color:#d32418;
+}
 /* button 공통 */
 button{
   color:#fff;
   background:#0779e4;
-  width:200px;
+  width:270px;
   padding:1rem;
   margin-top:1rem;
   text-align: center;
   border:0;
+  border-radius: 30px;
   transition:all .4s;
   cursor: pointer;
 }
