@@ -2,6 +2,13 @@
 body{
   background:#f1f1f1;
   color:#333;
+  background: url(./img/sample.jpg) no-repeat right 100%;
+  background-size:30%;
+}
+.Container{
+  width:1200px;
+  margin:0 auto;
+  text-align: center;
 }
 .formContainer{
   width:1200px;
@@ -10,6 +17,7 @@ body{
 }
 .form__title{
   font-size:2.4rem;
+  color:#0779e4;
 }
 .form__field{
   position: relative;
@@ -29,18 +37,25 @@ body{
   width:300px;
   height:auto;
   padding:1rem;
-  margin:2rem 0;
+  margin:1rem 0;
+  border:1px solid #ddd;
 }
 
+/* 에러 메시지 */
+.alert_title{
+  font-size:16px;
+  color:#d32418;
+}
 /* button 공통 */
 button{
   color:#fff;
   background:#0779e4;
-  width:200px;
+  width:270px;
   padding:1rem;
   margin-top:1rem;
   text-align: center;
   border:0;
+  border-radius: 30px;
   transition:all .4s;
   cursor: pointer;
 }
@@ -53,4 +68,14 @@ form > legend {
   height:1px;
   overflow: hidden;
   clip-path: polygon(0 0, 0 0, 0 0 , 0 0);
+}
+
+@media all and (max-width:1000px) {
+  body{
+    background-size:100%;
+    background-position: center top;
+  }
+  .Container{
+    width:80%;
+  }
 }

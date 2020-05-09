@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
+    <!-- <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"
+    /> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="{% static "fcuser/style.css" %}">
+  </head>
+  <body>
+    <section class="Container">
+    {% comment %}
+     베이스가 되는 HTML 파일
+     block으로 이 base.html을 상속받는 html 파일을 가져올 수 있다.
+     {% endcomment %}
+      {% block contents %}
+      {% endblock %}
+    </section>
+  </body>
+</html>

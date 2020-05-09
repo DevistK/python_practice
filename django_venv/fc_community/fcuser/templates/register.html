@@ -1,22 +1,7 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {% load static %}
-    <!-- <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"
-    /> -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
-    <link rel="stylesheet" href="{% static "fcuser/style.css" %}">
-  </head>
-  <body>
-    <section class="formContainer">
+{% extends 'base.html' %} 
+{% comment %} base html을 상속받는다 {% endcomment %}
+      {% block contents %}
       <h1 class="form__title">DJango에 가입해보세요</h1>
         <fieldset class="form__field">
           <form method="POST" action=".">
@@ -68,6 +53,4 @@
             <button type="submit" class="btn btn-default">회원가입</button>
           </form>
         </fieldset>
-    </section>
-  </body>
-</html>
+        {% endblock %}
