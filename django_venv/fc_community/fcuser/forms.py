@@ -25,7 +25,11 @@ class LoginForm(forms.Form):
 
         if username and password:
             # 이 모델안에 있는 username을 가져온다. 그리고 POST로 전송한 입력값이 모델안에 존재한다는 가정하에
-            fcuser = Fcuser.objects.get(username=username)
+            try:
+                fcuser = Fcuser.objects.get(username=username)
+            except Fcuser.DoesNotExist:
+                self.add_error('username', '아이디가 없습니다.')
+                return
             # 패스워드를 검사하는데 첫번째 인자로 전송한 데이터, 두번째 인자로 모델안에 있는 패스워드를 검사한다.
             if not check_password(password, fcuser.password):
                 self.add_error('password', '비밀번호를 틀렸습니다.')

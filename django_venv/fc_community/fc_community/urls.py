@@ -17,10 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 from fcuser.views import home
 
-# project url이 최상위 
+# project url이 최상위
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('fcuser/', include('fcuser.urls')),
+    path('board/', include('board.urls')),
     path('', home),
     # 기본 url 경로 '' 로 home을 받아온다.
 ]
