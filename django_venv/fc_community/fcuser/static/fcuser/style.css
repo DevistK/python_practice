@@ -134,6 +134,15 @@ textarea {
   background: #666;
   color: rgb(204, 204, 204);
 }
+/* 태그 */
+#tags {
+  border-radius: 5px;
+  padding: 10px;
+  display: inline-block;
+  color: #333;
+  font-weight: 600;
+  margin: 15px 5px;
+}
 @media all and (max-width: 1000px) {
   body {
     background-size: 100%;
