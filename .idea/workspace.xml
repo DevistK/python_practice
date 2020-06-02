@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4c05e7fe-83a1-4537-9936-9b8251de11c7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1cWvpy16Wnhw9nnyxrF6vp8U2X3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/fc_django/order/templates" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/fc_django/order/templates" />
+      <recent name="$PROJECT_DIR$/fc_django/order" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.manage">
+    <configuration name="order.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/django_fc/fc_django/order/templates/order.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="django_fc" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/.pyenv/versions/3.7.2/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fc_django" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fc_django/manage.py" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.order.html" />
+      <item itemvalue="Python.manage" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.order.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c05e7fe-83a1-4537-9936-9b8251de11c7" name="Default Changelist" comment="" />
+      <created>1590657350629</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590657350629</updated>
+      <workItem from="1590657352128" duration="948000" />
+      <workItem from="1590740597396" duration="135000" />
+      <workItem from="1590844568427" duration="56000" />
+      <workItem from="1591054378783" duration="10852000" />
+      <workItem from="1591078086672" duration="10000" />
+      <workItem from="1591078192602" duration="13294000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="104" y="40" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591088665628">
+      <screen x="0" y="23" width="1280" height="711" />
+    </state>
+    <state x="104" y="40" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.711@0.23.1280.711" timestamp="1591088665628" />
+    <state x="100" y="123" width="1080" height="511" key="DiffContextDialog" timestamp="1591059705272">
+      <screen x="0" y="23" width="1280" height="711" />
+    </state>
+    <state x="100" y="123" width="1080" height="511" key="DiffContextDialog/0.23.1280.711@0.23.1280.711" timestamp="1591059705272" />
+    <state width="1238" height="219" key="GridCell.Tab.0.bottom" timestamp="1591088747705">
+      <screen x="0" y="23" width="1280" height="711" />
+    </state>
+    <state width="1238" height="219" key="GridCell.Tab.0.bottom/0.23.1280.711@0.23.1280.711" timestamp="1591088747705" />
+    <state width="1238" height="219" key="GridCell.Tab.0.center" timestamp="1591088747704">
+      <screen x="0" y="23" width="1280" height="711" />
+    </state>
+    <state width="1238" height="219" key="GridCell.Tab.0.center/0.23.1280.711@0.23.1280.711" timestamp="1591088747704" />
+    <state width="1238" height="219" key="GridCell.Tab.0.left" timestamp="1591088747704">
+      <screen x="0" y="23" width="1280" height="711" />
+    </state>
+    <state width="1238" height="219" key="GridCell.Tab.0.left/0.23.1280.711@0.23.1280.711" timestamp="1591088747704" />
+    <state width="1238" height="219" key="GridCell.Tab.0.right" timestamp="1591088747705">
+      <screen x="0" y="23" width="1280" height="711" />
+    </state>
+    <state width="1238" height="219" key="GridCell.Tab.0.right/0.23.1280.711@0.23.1280.711" timestamp="1591088747705" />
+    <state width="1238" height="219" key="GridCell.Tab.1.bottom" timestamp="1591088747707">
+      <screen x="0" y="23" width="1280" height="711" />
+    </state>
+    <state width="1238" height="219" key="GridCell.Tab.1.bottom/0.23.1280.711@0.23.1280.711" timestamp="1591088747707" />
+    <state width="1238" height="219" key="GridCell.Tab.1.center" timestamp="1591088747706">
+      <screen x="0" y="23" width="1280" height="711" />
+    </state>
+    <state width="1238" height="219" key="GridCell.Tab.1.center/0.23.1280.711@0.23.1280.711" timestamp="1591088747706" />
+    <state width="1238" height="219" key="GridCell.Tab.1.left" timestamp="1591088747706">
+      <screen x="0" y="23" width="1280" height="711" />
+    </state>
+    <state width="1238" height="219" key="GridCell.Tab.1.left/0.23.1280.711@0.23.1280.711" timestamp="1591088747706" />
+    <state width="1238" height="219" key="GridCell.Tab.1.right" timestamp="1591088747707">
+      <screen x="0" y="23" width="1280" height="711" />
+    </state>
+    <state width="1238" height="219" key="GridCell.Tab.1.right/0.23.1280.711@0.23.1280.711" timestamp="1591088747707" />
+    <state width="1238" height="219" key="GridCell.Tab.2.bottom" timestamp="1591078082151">
+      <screen x="0" y="23" width="1280" height="711" />
+    </state>
+    <state width="1238" height="219" key="GridCell.Tab.2.bottom/0.23.1280.711@0.23.1280.711" timestamp="1591078082151" />
+    <state width="1238" height="219" key="GridCell.Tab.2.center" timestamp="1591078082150">
+      <screen x="0" y="23" width="1280" height="711" />
+    </state>
+    <state width="1238" height="219" key="GridCell.Tab.2.center/0.23.1280.711@0.23.1280.711" timestamp="1591078082150" />
+    <state width="1238" height="219" key="GridCell.Tab.2.left" timestamp="1591078082149">
+      <screen x="0" y="23" width="1280" height="711" />
+    </state>
+    <state width="1238" height="219" key="GridCell.Tab.2.left/0.23.1280.711@0.23.1280.711" timestamp="1591078082149" />
+    <state width="1238" height="219" key="GridCell.Tab.2.right" timestamp="1591078082150">
+      <screen x="0" y="23" width="1280" height="711" />
+    </state>
+    <state width="1238" height="219" key="GridCell.Tab.2.right/0.23.1280.711@0.23.1280.711" timestamp="1591078082150" />
+    <state width="243" height="457" key="HiddenNamespacesPopup" timestamp="1591097486600">
+      <screen x="0" y="23" width="1280" height="711" />
+    </state>
+    <state width="243" height="457" key="HiddenNamespacesPopup/0.23.1280.711@0.23.1280.711" timestamp="1591097486600" />
+    <state x="141" y="23" width="997" height="710" key="SettingsEditor" timestamp="1590657436757">
+      <screen x="0" y="23" width="1280" height="710" />
+    </state>
+    <state x="141" y="23" width="997" height="710" key="SettingsEditor/0.23.1280.710@0.23.1280.710" timestamp="1590657436757" />
+    <state x="338" y="23" width="604" height="711" key="find.popup" timestamp="1591088563722">
+      <screen x="0" y="23" width="1280" height="711" />
+    </state>
+    <state x="338" y="23" width="604" height="711" key="find.popup/0.23.1280.711@0.23.1280.711" timestamp="1591088563722" />
+    <state x="305" y="58" width="670" height="676" key="search.everywhere.popup" timestamp="1591079339849">
+      <screen x="0" y="23" width="1280" height="711" />
+    </state>
+    <state x="305" y="58" width="670" height="676" key="search.everywhere.popup/0.23.1280.711@0.23.1280.711" timestamp="1591079339849" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/django_fc$views.coverage" NAME="views Coverage Results" MODIFIED="1591088609607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fc_django/fcuser" />
+    <SUITE FILE_PATH="coverage/django_fc$manage.coverage" NAME="manage Coverage Results" MODIFIED="1591088697088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fc_django" />
+  </component>
+</project>
