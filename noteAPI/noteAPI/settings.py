@@ -123,6 +123,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+    }
+}
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
@@ -142,6 +147,5 @@ REST_FRAMEWORK = {
         'user': '1000/day'
     },
     'DEFAULT_PAGINATION_CLASS': 'cards.pagination.IdPagination',
-    'PAGE_SIZE': 2
-
+    'PAGE_SIZE': 2,
 }

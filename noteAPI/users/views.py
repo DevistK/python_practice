@@ -11,6 +11,9 @@ from rest_framework.response import Response
 from cards.pagination import IdPagination
 from .serializer import UserSerializer,UserCreateSerializer
 from .permissions import IsOwner
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
+from django.views.decorators.vary import vary_on_cookie
 
 
 class UserViewSet(ModelViewSet):
@@ -18,6 +21,14 @@ class UserViewSet(ModelViewSet):
     serializer_class = UserSerializer
     pagination_class = IdPagination
     permission_classes = [IsOwner]
+
+    @method_decorator(cache_page(60 * 60 * 2))
+    def list(self,request, *args, **kwargs):
+        return super().list(request)
+
+    @method_decorator(cache_page(60 * 60 * 2))
+    def retrieve(self, request, *args, **kwargs):
+        return super().retrieve(request, *args, **kwargs)
 
     def get_serializer_class(self):
         if self.action == 'create':
