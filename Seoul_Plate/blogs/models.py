@@ -14,5 +14,5 @@ class Blog(models.Model):
     #  포스트 생성 날짜
     post_date = models.DateTimeField(auto_now_add=True)
 
-    class Meta:
+    class Meta :
         ordering = ['-post_date']
