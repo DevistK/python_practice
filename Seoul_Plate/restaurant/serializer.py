@@ -5,6 +5,7 @@ from review.serializers import ReviewSerializer
 
 class RestSerializer(serializers.ModelSerializer):
     """ 식당 정보, 북마크 수 Serializer """
+    # read-only-fields: https://www.django-rest-framework.org/api-guide/serializers/#specifying-read-only-fields
     rest_count = serializers.ReadOnlyField()
 
     class Meta:
