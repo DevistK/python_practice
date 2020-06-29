@@ -23,8 +23,7 @@ class UserViewSet(mixins.CreateModelMixin,
     def get_permissions(self):
         if self.action in ('login', 'create'):
             return [AllowAny()]
-        # if -> elif
-        if self.action == 'logout':
+        elif self.action == 'logout':
             return [IsOwner()]
         return super().get_permissions()
 

@@ -43,4 +43,4 @@ class Review(models.Model):
     updated_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        ordering = ['-updated_at']
+        ordering = ['-id']

@@ -15,6 +15,7 @@ class BookMarkSerializer(serializers.ModelSerializer):
             'restaurant',
             'bookmarks',
         )
+        read_only_fields = ['bookmarks']
 
 
 class UserBookMarkSerializer(serializers.ModelSerializer):
