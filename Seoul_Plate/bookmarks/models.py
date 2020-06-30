@@ -1,8 +1,6 @@
 from django.db import models
 from django.db.models import F
-
 from restaurant.models import Restaurant
-from django.contrib.auth.models import User
 
 
 class BookMark(models.Model):
@@ -11,15 +9,12 @@ class BookMark(models.Model):
     - Restaurant id(PK)
     - User id(PK)
     """
-    # related_name 같은 내용이라 필요 없음
     restaurant = models.ForeignKey('restaurant.Restaurant', on_delete=models.CASCADE)
-    # 변수이름 수정 필요, default/null=False 의미가 맞지 않음
-    bookmarks = models.ForeignKey('auth.User', on_delete=models.CASCADE, null=False, related_name='bookmarks')
+    bookmark_user = models.ForeignKey('auth.User', on_delete=models.CASCADE, null=False, related_name='bookmarks')
 
-    # convention 맞지 않음
     class Meta:
         ordering = ['-id']
-        unique_together = ['restaurant', 'bookmarks']
+        unique_together = ['restaurant', 'bookmark_user']
 
     def save(self, force_insert=False, force_update=False, using=None,
              update_fields=None):

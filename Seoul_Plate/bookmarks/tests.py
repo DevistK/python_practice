@@ -15,7 +15,7 @@ class BookMarkTestCode(APITestCase):
         )
         self.users = baker.make('auth.User', _quantity=4)
 
-        self.restaurant = Restaurant.objects.create()
+        self.restaurant = Restaurant.objects.create(rest_name='any_rest')
 
     def test_bookmark_create(self):
         self.client.force_authenticate(user=self.user)
@@ -23,7 +23,7 @@ class BookMarkTestCode(APITestCase):
             'restaurant': self.restaurant.id
         }
 
-        response = self.client.post('/api/bookmark/', data=data)
+        response = self.client.post('/api/bookmarks', data=data)
 
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertTrue(response.data['id'])
@@ -31,41 +31,28 @@ class BookMarkTestCode(APITestCase):
 
     def test_bookmark_delete(self):
         self.client.force_authenticate(user=self.user)
-        test_bookmark = BookMark.objects.create(bookmarks=self.user, restaurant=self.restaurant)
+        test_bookmark = BookMark.objects.create(bookmark_user=self.user, restaurant=self.restaurant)
         entry = BookMark.objects.get(id=test_bookmark.id)
 
-        response = self.client.delete(f'/api/bookmark/{test_bookmark.id}')
+        response = self.client.delete(f'/api/bookmarks/{test_bookmark.id}')
 
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
 
         self.assertFalse(BookMark.objects.filter(id=entry.id).exists())
 
     def test_bookmark_duplicate(self):
-        baker.make('bookmarks.BookMark', bookmarks=self.user, restaurant_id=self.restaurant.id)
-
+        baker.make('bookmarks.BookMark', bookmark_user=self.user, restaurant_id=self.restaurant.id)
         self.client.force_authenticate(user=self.user)
         data = {
             'restaurant': self.restaurant.id
         }
-        # network 여러번 할 필요없이 필요한 환경을 강제로 설정
-        # response = self.client.post('/api/bookmark/', data=data)
 
-        response = self.client.post('/api/bookmark/', data=data)
+        response = self.client.post('/api/bookmarks', data=data)
 
         self.assertEqual(BookMark.objects.filter(
             restaurant=data['restaurant'],
-            bookmarks=self.user,
+            bookmark_user=self.user,
         ).count(), 1)
 
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
-    # 필요없어 보임
-    def test_bookmark_count(self):
-        for i in range(3):
-            self.client.force_authenticate(user=self.users[i])
-            data = {
-                'restaurant': self.restaurant.id
-            }
-            response = self.client.post('/api/bookmark/', data=data)
-
-        self.assertEqual(BookMark.objects.filter(restaurant=self.restaurant).count(), 3)

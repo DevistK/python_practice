@@ -8,13 +8,13 @@ from .models import Restaurant
 class Crawling:
     # 망고플레이트 성수동 검색 결과 하단 다음페이지 모음
 
-    base_url = 'https://www.mangoplate.com/search/%EC%84%B1%EC%88%98%EB%8F%99?keyword=%EC%84%B1%EC%88%98%EB%8F%99&page='
-    for i in range(1, 20):
-        url = f'{base_url}{i}'
-        response = requests.get(url)
-
-        if requests.status_code == 200:
-            pass
+    # base_url = 'https://www.mangoplate.com/search/%EC%84%B1%EC%88%98%EB%8F%99?keyword=%EC%84%B1%EC%88%98%EB%8F%99&page='
+    # for i in range(1, 20):
+    #     url = f'{base_url}{i}'
+    #     response = requests.get(url)
+    #
+    #     if requests.status_code == 200:
+    #         pass
 
     search_paging_array = [
         'https://www.mangoplate.com/search/%EC%84%B1%EC%88%98%EB%8F%99?keyword=%EC%84%B1%EC%88%98%EB%8F%99&page=1',
@@ -30,7 +30,6 @@ class Crawling:
     ]
 
     driver = webdriver.Chrome('/Users/mellomasi/Downloads/chromedriver')
-
 
     driver.implicitly_wait(3)
 
@@ -87,7 +86,7 @@ class Crawling:
                     rest_break_time = value
 
             # unique 값을 기준으로 get_or_create() 호출
-            r = Restaurant(
+            Restaurant.objects.get_or_create(
                 rest_name=rest_name,
                 rest_star=rest_star,
                 rest_address=rest_address,
@@ -97,11 +96,6 @@ class Crawling:
                 rest_time=rest_time,
                 rest_break_time=rest_break_time,
             )
-            rs.append(r)
-
-    # bulk create
-    # https://docs.djangoproject.com/en/3.0/ref/models/querysets/#bulk-create
-    Restaurant.objects.bulk_create(rs)
 
     driver.close()
 

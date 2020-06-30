@@ -15,17 +15,13 @@ class Review(models.Model):
     - review_image
     - taste_value
     """
+
+    class ChoiceTaste(models.TextChoices):
+        GOOD = 'GOOD'
+        SOSO = 'SOSO'
+        BAD = 'BAD'
+
     # TextChoices 사용: https://docs.djangoproject.com/en/3.0/ref/models/fields/#enumeration-types
-    GOOD = 'GOOD'
-    SOSO = 'SOSO'
-    BAD = 'BAD'
-
-    TASTE_CHOICES = [
-        (GOOD, 'Good'),
-        (SOSO, 'SoSo'),
-        (BAD, 'Bad'),
-    ]
-
 
     # 리뷰 식당
     # 적절한 related_name 설정
@@ -38,7 +34,7 @@ class Review(models.Model):
     # 음식 사진
     review_image = models.ImageField(upload_to='review_image', null=True, blank=True)
     # 맛 선택
-    taste_value = models.CharField(max_length=10, choices=TASTE_CHOICES, default=SOSO)
+    taste_value = models.CharField(max_length=10, choices=ChoiceTaste.choices, default='GOOD')
     # 작성 시간
     updated_at = models.DateTimeField(auto_now_add=True)
 

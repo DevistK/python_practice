@@ -77,7 +77,6 @@ class BlogTestCase(APITestCase):
 
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         self.assertEqual(Blog.objects.filter(pk=self.blog.id).count(), 0)
-        # 동일
         self.assertFalse(Blog.objects.filter(pk=self.blog.id).exists())
 
 

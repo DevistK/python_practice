@@ -6,5 +6,5 @@ from blogs.views import BlogViewSet
 
 router = SimpleRouter(trailing_slash=False)
 
-router.register('', BlogViewSet)
+router.register(r'blogs', BlogViewSet)
 urlpatterns = router.urls
