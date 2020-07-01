@@ -21,12 +21,12 @@ class BlogTestCase(APITestCase):
     def test_post_create(self):
         """"포스트 생성"""
         data = {
+            'post_owner':'1',
             'post_title': 'asdasdad',
-            'post_contents': 'sdsadas',
+            'post_contents': 'sdsadas'
         }
-
         self.client.force_authenticate(user=self.user)
-        response = self.client.post('/api/blogs/', data=data)
+        response = self.client.post('/api/blogs', data=data)
 
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         blog_response = Munch(response.data)
@@ -37,7 +37,7 @@ class BlogTestCase(APITestCase):
     def test_post_list(self):
         """"포스트 리스트"""
         self.client.force_authenticate(user=self.user)
-        response = self.client.get('/api/blogs/')
+        response = self.client.get('/api/blogs')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         for blog_response, blog in zip(response.data['results'], self.blogs[::-1]):

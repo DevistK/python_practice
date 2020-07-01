@@ -16,8 +16,8 @@ class ReviewTestCase(APITestCase):
         Create random reviews(3) , random user(1), random restaurant(1)
         """
         self.test_user = User.objects.create(username="test", password="1111")
-        self.test_reviews = baker.make('review.Review', _quantity=3)
-        self.test_restaurant = Restaurant.objects.create()
+        self.test_restaurant = Restaurant.objects.create(rest_name='rest_first')
+        self.test_reviews = baker.make('review.Review', _quantity=3, owner_rest=self.test_restaurant)
         self.review = Review.objects.create(review_text="for delete",
                                             owner_rest=self.test_restaurant,
                                             owner_user=self.test_user,
@@ -31,7 +31,7 @@ class ReviewTestCase(APITestCase):
         test_review = self.test_reviews[0]
         self.client.force_authenticate(user=test_review)
         # trailing slash 설정 변경 필요
-        response = self.client.get(f'/api/reviews/{test_review.id}')
+        response = self.client.get(f'/api/review/{test_review.id}')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data['id'], test_review.id)
@@ -49,7 +49,6 @@ class ReviewTestCase(APITestCase):
         Request : POST - /api/reviews/
         """
         data = {"review_text": "new review",
-                # "review_image": None,
                 "taste_value": "SOSO",
                 "owner_rest": self.test_restaurant.id,
                 "owner_user": self.test_user.id,

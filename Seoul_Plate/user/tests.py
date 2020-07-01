@@ -22,7 +22,7 @@ class UserTestCase(APITestCase):
         """
         user = self.users[0]
         self.client.force_authenticate(user=user)
-        response = self.client.get(f'/api/user/{user.id}')
+        response = self.client.get(f'/api/users/{user.id}')
         user_response = Munch(response.data)
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
@@ -34,7 +34,7 @@ class UserTestCase(APITestCase):
         Request : POST - /api/user/
         """
         data = {"username": "newuser", "password": self.password}
-        response = self.client.post('/api/user/', data=data)
+        response = self.client.post('/api/users', data=data)
 
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         user_response = Munch(response.data)
@@ -48,7 +48,7 @@ class UserTestCase(APITestCase):
         user = self.users[0]
         self.client.force_authenticate(user=user)
         entry = User.objects.get(id=user.id)
-        response = self.client.delete(f'/api/user/{entry.id}')
+        response = self.client.delete(f'/api/users/{entry.id}')
 
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         self.assertFalse(User.objects.filter(id=entry.id).exists())
@@ -61,7 +61,7 @@ class UserTestCase(APITestCase):
         prev_name = user.username
         self.client.force_authenticate(user=user)
         data = {"username": "changed"}
-        response = self.client.patch(f'/api/user/{user.id}', data=data)
+        response = self.client.patch(f'/api/users/{user.id}', data=data)
         user_response = Munch(response.data)
 
         self.assertEqual(user_response.username, data['username'])
@@ -71,7 +71,7 @@ class UserTestCase(APITestCase):
         """
         Request : POST - /api/user/login
         """
-        response = self.client.post('/api/user/login', data=self.data)
+        response = self.client.post('/api/users/login', data=self.data)
         user_response = Munch(response.data)
 
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -87,7 +87,7 @@ class UserTestCase(APITestCase):
         Token.objects.create(user=self.test_user)
         self.client.force_authenticate(user=self.test_user)
         # response = self.client.delete('/api/user/logout', HTTP_AUTHORIZATION='Token ' + token)
-        response = self.client.delete('/api/user/logout')
+        response = self.client.delete('/api/users/logout')
 
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         self.assertFalse(Token.objects.filter(user=self.test_user).exists())
