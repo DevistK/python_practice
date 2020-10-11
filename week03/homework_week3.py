@@ -15,6 +15,9 @@ chart_list = soup.select_one('#body-content > div.newest-list > div > table > tb
 
 # 음원차트 모든 리스트
 chart_item = chart_list.select('#body-content > div.newest-list > div > table > tbody > tr')
+chart_number = chart_list.select('#body-content > div.newest-list > div > table > tbody > tr > td.number')
+
+for number in chart_number:
+    num = number.contents[0].strip() # 순위
 
 # 다듬기 전
-print(chart_item)
