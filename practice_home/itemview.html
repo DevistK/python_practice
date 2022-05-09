@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>apple watch 6</title>
+</head>
+<body>
+<section class="defaultContainer itemContainer">
+    <figure class="Container__item">
+       <img src="./images/watch.png">
+    </figure>
+    <article class="Container__info">
+        <div class="info__titleInner">
+            <h1 class="titleInner">애플워치 <strong>series 6</strong></h1>
+            <span class="titlePrice">가격: 400,000원 / 개</span>
+            <p class="titleInfo">
+                혈중 산소 포화도를 측정해주는 새롭고 혁신적인 센서와 앱. 슬쩍 보기만 해도 각종 피트니스 수치가 한눈에 들어오는 향상된 상시표시형 Retina 디스플레이. Apple Watch
+                Series 6를 손목에 찬 순간, 더 건강하고, 더 활동적이고, 더 스마트한 삶이 한층 가까워집니다.
+            </p>
+        </div>
+        <div class="info__selectInner">
+            <h1 class="selectInner">주문하기</h1>
+            <p class="nameInput commonInput">
+                <label>주문자 성함:</label>
+                <input type="text" id="name" name="o_name" placeholder="성함을 입력해주세요">
+            </p>
+            <p class="countInput commonInput">
+                <label>수량:</label>
+                <select>
+                    <option value="1">1</option>
+                </select>
+            </p>
+            <p class="addressInput commonInput">
+                <label>주소:</label>
+                <input type="text" id="address" name="o_address" placeholder="주소를 입력해주세요">
+            </p>
+            <p class="numberInput commonInput">
+                <label>전화번호:</label>
+                <input type="text" id="number" name="o_num" placeholder="전화번호를 입력해주세요">
+            </p>
+        </div>
+        <button type="button" class="basicBtn orderBtn">주문하기</button>
+    </article>
+</section>
+<script type="text/javascript">
+    function orderConfirm() {
+        const btn = document.querySelector(".orderBtn"),
+            name = document.getElementById("name"),
+            address = document.getElementById("address"),
+            number = document.getElementById("number");
+
+        btn.addEventListener("click", function () {
+            // none  validate
+            if (name.value == ''){
+                alert("이름을 입력해주세요!");
+            }else if(address.value == ''){
+                alert("주소를 입력해주세요!");
+            }else if(number.value == ''){
+                alert("전화번호를 입력해주세요!")
+            } else {
+                alert("주문을 완료하였습니다.");
+                location.reload();
+            }
+        })
+    }
+
+    function init() {
+        console.log("function init");
+        orderConfirm();
+    }
+
+    init();
+</script>
+</body>
+</html>
